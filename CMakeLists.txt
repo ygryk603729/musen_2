@@ -9,8 +9,8 @@ cmake_minimum_required(VERSION 3.23...3.31)
 # Version
 # =============================================================================
 set(MUSEN_VERSION_MAJOR 1)
-set(MUSEN_VERSION_MINOR 74)
-set(MUSEN_VERSION_PATCH 2)
+set(MUSEN_VERSION_MINOR 75)
+set(MUSEN_VERSION_PATCH 0)
 set(MUSEN_VERSION "${MUSEN_VERSION_MAJOR}.${MUSEN_VERSION_MINOR}.${MUSEN_VERSION_PATCH}")
 
 project(MUSEN VERSION ${MUSEN_VERSION} LANGUAGES CXX)

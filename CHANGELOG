@@ -1,3 +1,22 @@
-Core:
-- Option to limit maximum particle velocity.
-- Make dynamic generator compatible with file merger.
+New features:
+- Add dynamic generators to text format.
+- Include PBC velocity to text format.
+- Add Rotate Around Center to text format.
+
+Models:
+- Make MAX_DAMP_RATIO a parameter in SBKelvin.
+- Use material viscosity in Kelvin model.
+
+UI:
+- Properly show broken bonds on GPU.
+- Force visibility of new geometries.
+- Proper particle scaling.
+- Keep geometry material upon resizing.
+
+CLI:
+- Add dynamic generators to script interface.
+- Add PBC_VELOCITY to script interface.
+
+Build:
+- New fully CMake-based build system.
+- Compile with CUDA 12.9.1 for Windows releases.
