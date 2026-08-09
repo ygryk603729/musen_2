@@ -73,6 +73,25 @@ bool CBondsAnalyzer::Export()
 			case CResultsAnalyzer::EPropertyType::Stress:
 				WriteValueToResults(-1 * DotProduct(pBond->GetForce(dTime), m_pSystemStructure->GetBond(dTime, vBonds[j]).Normalized())/ pBond->m_dCrossCutSurface, iTime);
 				break;
+			case CResultsAnalyzer::EPropertyType::BondElasticEnergy:
+			{
+				const CVector3 bondVec = m_pSystemStructure->GetBond(dTime, vBonds[j]);
+				const CVector3 axis = bondVec.Normalized();
+				const CVector3 Ftotal = pBond->GetForce(dTime);
+				const double Fn = DotProduct(Ftotal, axis);
+				const double Fs = (Ftotal - axis * Fn).Length();
+				const double L0 = pBond->GetInitLength();
+				const double A = pBond->m_dCrossCutSurface;
+				const double Kn_eff = (L0 != 0.0) ? A * pBond->GetYoungModulus() / L0 : 0.0;
+				const double Ks_eff = (L0 != 0.0) ? A * pBond->GetShearModulus() / L0 : 0.0;
+				double dEnergy = 0.0;
+				if (Kn_eff != 0.0)
+					dEnergy += Fn * Fn / Kn_eff;
+				if (Ks_eff != 0.0)
+					dEnergy += Fs * Fs / Ks_eff;
+				WriteValueToResults(0.5 * dEnergy, iTime);
+				break;
+			}
 			default:
 				break;
 			}
