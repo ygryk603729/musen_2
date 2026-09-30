@@ -287,7 +287,6 @@ CConsoleResultsAnalyzer::EProcessResultType CConsoleResultsAnalyzer::SetProperti
 		lookupTable["VelocityTotal"] = CResultsAnalyzer::EPropertyType::VelocityTotal;
 		lookupTable["Deformation"]   = CResultsAnalyzer::EPropertyType::Deformation;
 		lookupTable["Strain"]        = CResultsAnalyzer::EPropertyType::Strain;
-		lookupTable["BondElasticEnergy"] = CResultsAnalyzer::EPropertyType::BondElasticEnergy;
 	}
 	if (_analyzerType == EAnalyzerTypes::ParticlesAnalyzer)
 	{
