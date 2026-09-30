@@ -71,7 +71,7 @@ public:
 	};
 	struct STDBondPropsFlags : SBaseFlags
 	{
-		CREATE_FLAGS(STDBondPropsFlags, coord, force, forceAmpl, tangOverlap, temperature, totTorque, velocity, energy)
+		CREATE_FLAGS(STDBondPropsFlags, coord, force, forceAmpl, tangOverlap, temperature, totTorque, velocity)
 	};
 	struct STDWallPropsFlags : SBaseFlags
 	{
