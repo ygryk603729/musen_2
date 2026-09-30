@@ -59,8 +59,7 @@ CResultsAnalyzerTab::CResultsAnalyzerTab(QWidget *parent)
 		CResultsAnalyzer::EPropertyType::ForceTotal, CResultsAnalyzer::EPropertyType::KineticEnergy, CResultsAnalyzer::EPropertyType::Length, CResultsAnalyzer::EPropertyType::MaxOverlap,
 		CResultsAnalyzer::EPropertyType::Orientation, CResultsAnalyzer::EPropertyType::PartNumber, CResultsAnalyzer::EPropertyType::PotentialEnergy, CResultsAnalyzer::EPropertyType::ResidenceTime,
 		CResultsAnalyzer::EPropertyType::Strain, CResultsAnalyzer::EPropertyType::VelocityNormal, CResultsAnalyzer::EPropertyType::VelocityRotational,
-		CResultsAnalyzer::EPropertyType::VelocityTangential, CResultsAnalyzer::EPropertyType::VelocityTotal, CResultsAnalyzer::EPropertyType::Stress, CResultsAnalyzer::EPropertyType::Temperature,
-		CResultsAnalyzer::EPropertyType::BondElasticEnergy };
+		CResultsAnalyzer::EPropertyType::VelocityTangential, CResultsAnalyzer::EPropertyType::VelocityTotal, CResultsAnalyzer::EPropertyType::Stress, CResultsAnalyzer::EPropertyType::Temperature };
 
 	m_vTypesForDistanceActive = { CResultsAnalyzer::EPropertyType::Distance };
 
